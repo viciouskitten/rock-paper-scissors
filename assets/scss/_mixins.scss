@@ -1,0 +1,93 @@
+/*==========================================
+
+  BREAKPOINTS
+
+==========================================*/
+@mixin bp($point){
+  // "less than XS" mobile only (saves having to zero out properties on larger breakpoints)
+  @if $point == lt-xs {
+    @media only screen and (max-width: $screenXS) {
+      @content;
+    }
+  }
+  @else if $point == lt-s {
+    @media only screen and (max-width: $screenS) {
+      @content;
+    }
+  }
+  @else if $point == lt-m {
+    @media only screen and (max-width: $screenM) {
+      @content;
+    }
+  }
+  @else if $point == lt-l {
+    @media only screen and (max-width: $screenL) {
+      @content;
+    }
+  }
+  // Extra small devices (smart-phones from 480px)
+  @else if $point == xs {
+    @media only screen and (min-width: $screenXS) {
+      @content;
+    }
+  }
+  
+  // Small devices (tablets, 768px and up)
+  @else if $point == s {
+    @media only screen and (min-width: $screenS) {
+      @content;
+    }
+  }
+  @else if $point == s-m {
+    @media only screen and (min-width: $screenS) and (max-width: $screenM) {
+      @content;
+    }
+  }
+  @else if $point == m {
+    // Medium devices (desktops, 992px and up)
+    @media only screen and (min-width: $screenM) {
+      @content;
+    }
+  }
+  @else if $point == m-l {
+    // Medium to Large only
+    @media only screen and (min-width: $screenM) and (max-width: $screenL) {
+      @content;
+    }
+  }
+  @else if $point == l {
+    // Large devices (large desktops, 1200px and up)
+    @media only screen and (min-width: $screenL) {
+      @content;
+    }
+  }
+  @else if $point == xl {
+    // Large devices (large desktops, 1350px and up)
+    @media only screen and (min-width: $screenXL) {
+      @content;
+    }
+  }
+  @else if $point == landscape {
+    @media only screen and (orientation:landscape) {
+      @content;
+    }
+  }
+  @else if $point == portrait {
+    @media only screen and (orientation:portrait) {
+      @content;
+    }
+  }
+  @else {
+    @media only screen and (min-width: $point) {
+      @content;
+    }
+  }
+}
+
+@mixin hide-text(){
+  font-size:0;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}

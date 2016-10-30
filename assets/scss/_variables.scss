@@ -1,0 +1,40 @@
+// WIDTHS
+$max-width: 1400px;
+$med-width: 900px;
+
+// BREAKPOINTS
+$screenS: 600px;
+$screenM: 800px;
+$screenL: 1200px;
+$ml: 1000px;
+$border-radius-width: 900px;
+
+// FONTS
+$rock: 'Luckiest Guy', cursive;
+$paper: 'Open Sans Condensed', sans-serif;
+$scissors: 'Mr Dafoe', cursive;
+
+$body-font: $paper;
+
+// COLOURS
+$dark-grey: #333;
+$white: #f9f9f9;
+$duck-blue: #78d1dc;
+$purple: #eee1fe;
+$yellow: #f9edc5;
+$pink: #ffcbe2;
+$green: #ade9dd;
+
+// COLOR ASSIGNMENTS
+$body-bg: $duck-blue;
+$header-bg: $dark-grey;
+$border: $duck-blue;
+$border-dark: $dark-grey;
+$arena-bg: $dark-grey;
+$button: $dark-grey;
+$footer: $dark-grey;
+
+// TIMINGS
+$cubic: cubic-bezier(0.46,-0.41,0.3,1.52);
+$transition: 0.4s ease-out all;
+$cubic-transition: 1s $cubic all;

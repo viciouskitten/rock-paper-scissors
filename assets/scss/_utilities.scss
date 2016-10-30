@@ -1,0 +1,167 @@
+/*==========================================
+
+  LAYOUT
+
+==========================================*/
+.container {
+    padding: 0 2rem;
+    max-width: $med-width;
+    margin: 0 auto;
+    width: 100%;
+
+    &.container-collapse {
+        padding: 0;
+
+        @include bp(m) {
+            padding: 0.2rem;
+        }
+    }
+
+}
+
+.medium-container {
+    @extend .container;
+    max-width: $med-width;
+}
+
+/*==========================================
+
+  GENERAL
+
+==========================================*/
+.character {
+    display: inline-block;
+    margin: 0.5rem;
+    border-radius: 100%;
+    background-color: white;
+    border: 5px solid $border;
+    background-repeat: no-repeat;
+}
+
+.button {
+    padding: 10px 20px;
+    border: none;
+    padding: 10px 40px;
+    border: none;
+    background-color: $button;
+    color: $white;
+    font-size: 2rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    transition: $transition;
+    overflow: hidden;
+    border-radius: 5px;
+
+    &.active {
+        background-color: $duck-blue;
+        color: $dark-grey;
+
+        @include bp(m) {
+
+            &:hover {
+                color: $dark-grey;
+
+                &:before,
+                &:after {
+                    background-color: $duck-blue;
+                }
+            }
+        }
+    }
+
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 51%;
+        height: 100%;
+        top: 0;
+        background-color: $white;
+        transition: $transition;
+    }
+
+    &:before {
+        left: -100%;
+    }
+
+    &:after {
+        right: -100%;
+    }
+
+    @include bp(m) {
+
+        &:hover {
+            color: $dark-grey;
+            transition: $transition;
+
+            &:before,
+            &:after {
+                transition: $transition;
+            }
+
+            &:before {
+                left: 0;
+            }
+
+            &:after {
+                right: 0;
+            }
+        }
+    }
+
+}
+
+/*==========================================
+
+  BACKGROUNDS
+
+==========================================*/
+.tie {
+    background-color: $yellow;
+}
+
+.win {
+    background-color: $green;
+}
+
+.lose {
+    background-color: $pink;
+}
+
+.rock {
+    background-image: url('../images/rock.svg');
+}
+
+.paper {
+    background-image: url('../images/paper.svg');
+}
+
+.scissors {
+    background-image: url('../images/scissors.svg');
+}
+
+.character1 {
+    background-image: url('../images/character1.svg');
+}
+
+.character2 {
+    background-image: url('../images/character2.svg');
+}
+
+.character3 {
+    background-image: url('../images/character3.svg');
+}
+
+.robot1 {
+    background-image: url('../images/robot1.svg');
+}
+
+.robot2 {
+    background-image: url('../images/robot2.svg');
+}
+
+.robot3 {
+    background-image: url('../images/robot3.svg');
+}
